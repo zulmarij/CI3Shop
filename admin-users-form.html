@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.80.0" />
-    <title>Pengguna - Codeigniter Shop</title>
+    <title>Tambah Pengguna - Codeigniter Shop</title>
 
     <link
       rel="canonical"
@@ -137,64 +137,66 @@
     <main class="container">
       <div class="row">
         <div class="col-md-10 mx-auto">
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-header">
-              <span>Pengguna</span>
-              <a href="/admin-users-form.html" class="btn btn-sm btn-secondary"
-                >Tambah</a
-              >
-              <div class="float-end">
-                <form action="#">
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control form-control-sm text-center"
-                      placeholder="Cari"
-                    />
-                    <div class="input-group-append">
-                      <button class="btn btn-secondary btn-sm" type="submit">
-                        <i class="fas fa-search"></i>
-                      </button>
-                      <a href="#" class="btn btn-secondary btn-sm"
-                        ><i class="fas fa-eraser"></i
-                      ></a>
-                    </div>
-                  </div>
-                </form>
-              </div>
+              <span>Tambah Pengguna</span>
             </div>
             <div class="card-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Pengguna</th>
-                    <th scope="col">E-Mail</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">Status</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <p>
-                        <img src="https://placehold.co/70x70" alt="" /> Admin
-                      </p>
-                    </td>
-                    <td>admin@gmail.com</td>
-                    <td>Admin</td>
-                    <td>Aktif</td>
-                    <td>
-                      <form action="#">
-                          <a href="#"><button class="btn btn-sm"><i class="fas fa-edit text-info"></i></button></a>
-                          <button class="btn btn-sm" type="submit" onclick="return confirm('Apakah kamu yakin ingin menghapus pengguna ini?')"><i class="fas fa-trash text-danger"></i></button>
-                      </form>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <form action="#">
+                <div class="form-group">
+                  <label for="" class="form-label">Nama</label>
+                  <input type="text" class="form-control" required autofocus />
+                  <small class="from-text text-danger">Nama harus diisi</small>
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">E-Mail</label>
+                  <input type="email" class="form-control" required />
+                  <small class="from-text text-danger"
+                    >E-Mail harus diisi</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">Password</label>
+                  <input type="password" class="form-control" required />
+                  <small class="from-text text-danger"
+                    >Password harus diisi</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">Role</label>
+                  <select name="role" id="" class="form-control">
+                    <option value="admin">Admin</option>
+                    <option value="member">Member</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">Status</label>
+                  <br />
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="status"
+                      class="form-check-input"
+                      value="1"
+                    />
+                    <label for="" class="form-check-label">Aktif</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      type="radio"
+                      name="status"
+                      class="form-check-input"
+                      value="2"
+                    />
+                    <label for="" class="form-check-label">Non-Aktif</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">Photo</label>
+                  <input type="file" name="photo" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+              </form>
             </div>
           </div>
         </div>
