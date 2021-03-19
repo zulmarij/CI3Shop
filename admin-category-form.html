@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.80.0" />
-    <title>Tambah Pengguna - Codeigniter Shop</title>
+    <title>Tambah Kategori - Codeigniter Shop</title>
 
     <link
       rel="canonical"
@@ -139,62 +139,24 @@
         <div class="col-md-10 mx-auto">
           <div class="card mb-3">
             <div class="card-header">
-              <span>Tambah Pengguna</span>
+              <span>Tambah Kategori</span>
             </div>
             <div class="card-body">
               <form action="#">
-              <div class="form-group">
-                <label for="" class="form-label">Nama</label>
-                <input type="text" class="form-control" required autofocus />
-                <small class="from-text text-danger">Nama harus diisi</small>
-              </div>
-              <div class="form-group">
-                <label for="" class="form-label">E-Mail</label>
-                <input type="email" class="form-control" required />
-                <small class="from-text text-danger">E-Mail harus diisi</small>
-              </div>
-              <div class="form-group">
-                <label for="" class="form-label">Password</label>
-                <input type="password" class="form-control" required />
-                <small class="from-text text-danger"
-                  >Password harus diisi</small
-                >
-              </div>
-              <div class="form-group">
-                <label for="" class="form-label">Role</label>
-                <select name="role" id="" class="form-control">
-                  <option value="admin">Admin</option>
-                  <option value="member">Member</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="" class="form-label">Status</label>
+                <div class="form-group">
+                  <label for="" class="form-label">Kategori</label>
+                  <input type="text" class="form-control" id="title" onkeyup="createSlug()" required autofocus />
+                  <small class="from-text text-danger"
+                    >Kategori harus diisi</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">Slug</label>
+                  <input type="text" class="form-control" id="slug" required />
+                  <small class="from-text text-danger"></small>
+                </div>
                 <br />
-                <div class="form-check form-check-inline">
-                  <input
-                    type="radio"
-                    name="status"
-                    class="form-check-input"
-                    value="1"
-                  />
-                  <label for="" class="form-check-label">Aktif</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    type="radio"
-                    name="status"
-                    class="form-check-input"
-                    value="2"
-                  />
-                  <label for="" class="form-check-label">Non-Aktif</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="" class="form-label">Photo</label>
-                <input type="file" name="photo" class="form-control" />
-              </div>
-              <br />
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
               </form>
             </div>
           </div>
@@ -204,5 +166,6 @@
 
     <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/app.js"></script>
   </body>
 </html>
