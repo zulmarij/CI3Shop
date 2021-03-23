@@ -1,8 +1,8 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Register_model extends MY_Model 
+class Register_model extends MY_Model
 {
 
 	protected $table = 'user';
@@ -14,7 +14,7 @@ class Register_model extends MY_Model
 			'email'		=> '',
 			'password'	=> '',
 			'role'		=> '',
-			'is_active'	=> ''	
+			'is_active'	=> ''
 		];
 	}
 
@@ -31,7 +31,7 @@ class Register_model extends MY_Model
 				'label'		=> 'E-Mail',
 				'rules'		=> 'trim|required|valid_email|is_unique[user.email]',
 				'errors'	=> [
-					'is_unique' => 'This %s already e'
+					'is_unique' => 'This %s already exist'
 				]
 			],
 			[
@@ -71,7 +71,6 @@ class Register_model extends MY_Model
 		$this->session->set_userdata($sess_data);
 		return true;
 	}
-
 }
 
 /* End of file Register_model.php */
