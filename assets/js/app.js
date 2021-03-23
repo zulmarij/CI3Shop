@@ -1,8 +1,7 @@
-function createSlug() {
+function createSlug () {
     let title = $('#title').val();
     $('#slug').val(string_to_slug(title));
 }
-
 
 function string_to_slug (str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
