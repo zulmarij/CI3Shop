@@ -1,8 +1,8 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Register extends MY_Controller 
+class Register extends MY_Controller
 {
 
 	public function __construct()
@@ -40,8 +40,6 @@ class Register extends MY_Controller
 			redirect(base_url('/register'));
 		}
 	}
-	
-
 }
 
 /* End of file Register.php */
