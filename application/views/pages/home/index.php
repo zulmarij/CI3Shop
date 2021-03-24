@@ -19,7 +19,7 @@
 				<?php foreach($content as $row) : ?>
 				<div class="col-md-6">
 					<div class="card mb-3">
-						<img src="<?= $row->image ? base_url("/images/product/$row->image") : base_url("/images/product/default.png") ?>" alt="" height="" class="card-img-top">
+						<img src="<?= $row->image ? base_url("/images/product/$row->image") : base_url("/images/product/default.png") ?>" alt="" height="200" width="100" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title"><?= $row->product_title ?></h5>
 							<p class="card-text"><strong>Rp<?= number_format($row->price, 0, ',', '.') ?>,-</strong></p>
